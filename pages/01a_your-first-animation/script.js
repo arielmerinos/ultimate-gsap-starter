@@ -11,13 +11,17 @@ gsap.to(card, {
     opacity: 0.5,
     duration: 1,
     ease: "power1.inOut",
+    repeat: 1,
+
+    yoyo: true,
     onComplete: () => {
         gsap.to(card, {
             x: 0,
-            scale: 1.5,
+            scale: 0,
             opacity: 1,
             duration: 1,
             ease: "power1.inOut",
+            yoyo: true,
         });
     }
 });
